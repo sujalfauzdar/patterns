@@ -8,11 +8,18 @@ using namespace std;
             cout<<"*";
             return;
         }
+        for(int i =0 ; i < n ;i++){
+            for(int j = 0; j < n-i-1 ;j++)cout<<" ";
+            cout<<"*";
+            if(i > 0){
+                for(int j =0 ; j < 2 * i -1 ;j++)cout<<" ";
+                cout<<"*";
+            }
+            cout<<endl;
+        }
 
-        for(int i =0 ; i < 2 * n -1;i++) cout<<"*";
-        cout<<endl;
 
-        for(int i = 1; i <= n-1 ;i++){
+        for(int i = 1; i < n ;i++){
             for(int j = 0 ; j < i ;j++) cout<<" ";
             cout<<"*";
             if(i < n-1){
@@ -24,5 +31,9 @@ using namespace std;
     }
 
 int main(){
-
+    int n ;
+    cout<<"Enter the size of Diamond : "<<endl;
+    cin>>n;
+    hollowDiamond(n);
+    return 0;
 }

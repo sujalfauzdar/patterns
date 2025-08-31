@@ -2,9 +2,9 @@
 
 using namespace std;
 
-    void hollowDiamond(int n ){
-        if(n == 0) return ;
-        if( n== 1){
+    void invertedHollowPyramid(int n){
+        if(n==0) return;
+        if(n==1){
             cout<<"*";
             return;
         }
@@ -21,8 +21,14 @@ using namespace std;
             cout<<endl;
         }
         }
+        
     }
 
 int main(){
+    int n;
+    cout<<"Enter the Size of Pyramid : ";
+    cin>>n;
+    invertedHollowPyramid(n);
 
+    return 0;
 }
